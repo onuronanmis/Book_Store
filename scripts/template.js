@@ -68,5 +68,71 @@ function getHeartTemplate(indexBook) {
 }
 
 
+function gettableTemplate(indexBook) {
+    return /*html*/`
+        <table>
+            <tr>
+                <th>Author</th>
+                <td> ${books[indexBook].author}</td>
+            </tr>
+            <tr>
+                <th>Erscheinungsjahr</th>
+                <td> ${books[indexBook].publishedYear}</td>
+            </tr>
+            <tr>
+                <th>Genre</th>
+                <td> ${books[indexBook].genre}</td>
+            </tr>
+        </table>
+    `;
+}
 
+
+function getCommentAreaTemplate(indexBook) {
+    return /*html*/`
+        <div class="comment_area">
+            <h3>Kommentare:</h3>
+            <div class="comments">
+                ${getCommentsTemplate(indexBook)}
+            </div>
+            ${getCommentInputTemplate(indexBook)}
+        </div>
+    `;
+}
+
+
+function getCommentsTemplate(indexBook) {
+    let commentsHTML = "";
+
+    for (let indexComment = 0; indexComment < books[indexBook].comments.length; indexComment++) {
+        commentsHTML += getSingleCommentTemplate(indexBook, indexComment);
+    }
+
+    return commentsHTML();
+}
+
+
+function getSingleCommentTemplate(indexBook, indexComment) {
+    return /*html*/`
+        <div class="comment">
+            <p>[${books[indexBook].comments[indexComment].name}]</p>
+            <span>: ${books[indexBook].comments[indexComment].comment}</span>
+        </div>
+    `;
+}
+
+
+function getCommentInputTemplate(indexBook) {
+    return /*html*/`
+        <div class="comment_input">
+            <input id="comment_${indexBook}" type="text" placeholder="Schreibe deinen Kommentar....">
+            <button class="send_button" onclick="addComment(${indexBook})">
+                <svg viewBox="0 0 24 24">
+                    <path d="M22 2L9.5 14.5M22 2L14 22
+                    L9.5 14.5L2 10L22 2Z"/>
+                </svg>
+            </button>
+        </div>
+    `;
+}
 
