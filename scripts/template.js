@@ -33,8 +33,8 @@ function getBookImageTemplate(indexBook) {
 function getBookInfoTemplate(indexBook) {
     return /*html*/`
         <div class="book_info">
-            ${getPriceLikeTemplate[indexBook]}
-            ${gettableTemplate[indexBook]}
+            ${getPriceLikeTemplate(indexBook)}
+            ${gettableTemplate(indexBook)}
         </div>
     `;
 }
@@ -47,7 +47,7 @@ function getPriceLikeTemplate(indexBook) {
             <div class="like_area">
                 <span>${books[indexBook].likes}</span>
                 <button class="heart_button" onclick="likeBook(${indexBook})">
-                    ${getBookHeaderTemplate(indexBook)}
+                    ${getHeartTemplate(indexBook)}
                 </button>
             </div>
         </div>
@@ -108,7 +108,7 @@ function getCommentsTemplate(indexBook) {
         commentsHTML += getSingleCommentTemplate(indexBook, indexComment);
     }
 
-    return commentsHTML();
+    return commentsHTML;
 }
 
 

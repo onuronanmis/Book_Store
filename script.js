@@ -16,7 +16,7 @@ function renderBooks() {
 
 function likeBook(indexBook) {
     if (books[indexBook].liked == false) {
-        books[indexBook].liked == true;
+        books[indexBook].liked = true;
         books[indexBook].likes++;
     } else {
         books[indexBook].liked = false;
@@ -40,7 +40,7 @@ function addComment(indexBook) {
 
 function saveComment(indexBook, comment) {
     books[indexBook].comments.push({
-        neme: "Onur",
+        name: "Onur",
         comment: comment
     })
 }
