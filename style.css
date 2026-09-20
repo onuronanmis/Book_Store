@@ -4,7 +4,7 @@ body{
     min-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #140b20;
-    color: white;
+    color: #eeee8a;
 }
 
 
@@ -52,6 +52,8 @@ main{
 
 .book_title h2{
     font-size: 24px;
+    color: #eeee8a;
+    text-align: center;
 }
 
 
@@ -74,3 +76,194 @@ main{
 }
 
 
+.book_info{
+    padding: 20px;
+}
+
+
+.price_like{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+.price_like h3{
+    color: #ff555d;
+    font-size: 24px;
+}
+
+
+.like_area{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+.heart_button{
+    width: 45px;
+    height: 45px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+.heart_icon{
+    width: 36px;
+    height: 36px;
+    fill: transparent;
+    stroke: #ff555d;
+    stroke-width: 2;
+}
+
+
+.heart_icon.liked{
+    fill: #ff555d;
+}
+
+
+.heart_button:hover{
+    transform: scale(1.1);
+}
+
+
+table{
+    width: 100%;
+}
+
+
+th, td{
+    padding: 5px 10px;
+    color: #eeee8a;
+}
+
+
+th{
+    width: 145px;
+    text-align: left;
+    
+}
+
+
+.comment_area{
+    padding: 20px;
+    background-color: #241236;
+    border-top: 2px solid #a96ce0;
+}
+
+
+.comments{
+    height: 160px;
+    overflow-y: auto;
+    padding-right: 8px;
+    margin-bottom: 16px;
+}
+
+
+.comment{
+    display: flex;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+
+.comment p{
+    width: 120px;
+    min-width: 120px;
+    color: #d5b1ff;    
+}
+
+
+.comments::-webkit-scrollbar{
+    width: 5px;
+}
+
+
+.comments::-webkit-scrollbar-track{
+    background-color: #170b23;
+}
+
+
+.comments::-webkit-scrollbar-thumb{
+    background-color: #a96ce0;
+    border-radius: 10px;
+}
+
+
+.comment_input{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.comment_input input{
+    width: 100%;
+    padding: 10px 5px;
+    border: 2px solid #a96ce0;
+    outline: none;
+    background-color: transparent;
+    color: #eeee8a;
+    font-size: 16px;
+}
+
+
+.comment_input input::placeholder{
+    color: #a994b8;
+}
+
+
+.send_button{
+    width: 36px;
+    height: 36px;
+    padding: 4px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+.send_button svg{
+    width: 28px;
+    height: 28px;
+    fill: transparent;
+    stroke: #a96ce0;
+    stroke-width: 1.5;
+}
+
+
+.send_button:hover{
+    transform: scale(1.1);
+}
+
+
+@media (max-width:500px) {
+    main {
+        padding: 20px 10px;
+    }
+
+    .book_title h2 {
+        font-size: 19px;
+    }
+
+    th {
+        width: 125px;
+        font-size: 14px;
+    }
+
+    td {
+        font-size: 14px;
+    }
+
+    .comment {
+        font-size: 14px;
+    }
+
+    .comment b {
+        width: 95px;
+        min-width: 95px;
+    }
+}
