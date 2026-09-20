@@ -1,4 +1,4 @@
-let books = [
+const books = [
     {
       "name": "Die Geheimnisse des Ozeans",
       "author": "Clara Meer",
@@ -175,7 +175,7 @@ let books = [
   ] 
 
 
-let images = [
+const images = [
   "01_die_geheimnisse_des_ozeans.jpg",
   "02_der_vergessene_pfad.jpg",
   "03_die_farben_des_himmels.jpg",
