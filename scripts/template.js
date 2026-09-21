@@ -56,7 +56,13 @@ function getPriceLikeTemplate(indexBook) {
 
 
 function getHeartTemplate(indexBook) {
-    let likedClass = books[indexBook].liked ? "liked" : "";
+    let likedClass = "";
+
+    if (books[indexBook].liked == true) {
+        likedClass = "liked";
+    } else {
+        likedClass = "";
+    }
 
     return /*html*/`
         <svg class="heart_icon ${likedClass}" viewBox="0 0 24 24">
